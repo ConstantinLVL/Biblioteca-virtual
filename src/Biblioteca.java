@@ -34,6 +34,12 @@ public class Biblioteca {
         }
     }
 
+    public void mostrarLibros(){
+        for (Libro libro: this.libros){
+            System.out.println(libro.toString());
+        }
+    }
+
     public String getNombre() {
         return nombre;
     }
