@@ -22,6 +22,18 @@ public class Biblioteca {
         else System.out.println("El libro no se agrego a la Biblioteca, revisa que no exista y los requisitos para agregarlo");
     }
 
+    public void eliminarLibro(String titulo){
+        if (nombre != null){
+            for (Libro libro: libros) {
+                if ( libro.getTitulo().equals(titulo) ){
+                    libros.remove(libro);
+                    System.out.println("Se elimino el libro exitosamente");
+                    break;
+                }
+            }
+        }
+    }
+
     public String getNombre() {
         return nombre;
     }
