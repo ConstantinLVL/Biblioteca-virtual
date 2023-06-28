@@ -5,6 +5,13 @@ public class Libro {
     private String genero;
     private short anhoPublicacion;
 
+    public Libro(String titulo, String autor, String genero, short anhoPublicacion){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.genero = genero;
+        this.anhoPublicacion = anhoPublicacion;
+    }
+
     public String getTitulo() {
         return titulo;
     }
