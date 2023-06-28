@@ -6,6 +6,11 @@ public class Biblioteca {
     private String ciudad;
     private HashSet<Libro> libros = new HashSet<>();
 
+    public Biblioteca(String nombre, String ciudad){
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+    }
+
     public void agregraLibro(String titulo,String autor, String genero, short anhoPublicacion){
         boolean seIngreso = false;
         if ( (titulo != null && autor != null && genero != null) ){
@@ -15,6 +20,18 @@ public class Biblioteca {
         }
         if (seIngreso) System.out.println("El libro se agrego a la Biblioteca de forma exitosa!");
         else System.out.println("El libro no se agrego a la Biblioteca, revisa que no exista y los requisitos para agregarlo");
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCiudad() {
+        return ciudad;
     }
 
 }
