@@ -43,4 +43,12 @@ public class Libro {
     public void setAnhoPublicacion(short anhoPublicacion) {
         this.anhoPublicacion = anhoPublicacion;
     }
+
+    @Override
+    public String toString() {
+        return "Titulo: " + titulo +
+                "\nAutor: " + autor +
+                "\nGenero: " + genero +
+                "\nAño de publicacion: " + anhoPublicacion;
+    }
 }
