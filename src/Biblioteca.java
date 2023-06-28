@@ -23,10 +23,10 @@ public class Biblioteca {
     }
 
     public void eliminarLibro(String titulo){
-        if (nombre != null){
-            for (Libro libro: libros) {
+        if (titulo != null){
+            for (Libro libro: this.libros) {
                 if ( libro.getTitulo().equals(titulo) ){
-                    libros.remove(libro);
+                    this.libros.remove(libro);
                     System.out.println("Se elimino el libro exitosamente");
                     break;
                 }
