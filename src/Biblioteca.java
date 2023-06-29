@@ -71,6 +71,10 @@ public class Biblioteca {
         switch (opiconDeBusqueda) {
             case 1 -> busquedaPorAutor(bibliotecaActual);
             case 2 -> busquedaPorTitulo(bibliotecaActual);
+            default -> {
+                System.err.println("La opcion elegida no es valida, el programa se terminara");
+                System.exit(0);
+            }
         }
     }
 

@@ -35,7 +35,7 @@ public class Main {
             case 1 -> menuDeOPciones(bibliotecaBarcelona);
             case 2 -> menuDeOPciones(bibliotecaBarranquilla);
             default -> {
-                System.err.println("La opcion elegida no es valida, el programa se cerrara");
+                System.err.println("La opcion elegida no es valida, el programa se terminara");
                 System.exit(0);
             }
         }
@@ -58,7 +58,7 @@ public class Main {
             case 3 -> ciudadBiblioteca.buscarLibro(ciudadBiblioteca);
             case 4 -> ciudadBiblioteca.mostrarLibros(ciudadBiblioteca);
             default -> {
-                System.err.println("La opcion elegida no es valida, el programa se cerrara");
+                System.err.println("La opcion elegida no es valida, el programa terminara");
                 System.exit(0);
             }
         }
