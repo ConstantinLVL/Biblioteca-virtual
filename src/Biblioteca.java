@@ -15,11 +15,11 @@ public class Biblioteca {
 
     public void agregraLibro(){
         System.out.println("Ingresa el titulo del libro");
-        String titulo = sc.next();
+        String titulo = sc.nextLine();
         System.out.println("Ingresa el nombre del autor del libro");
-        String autor = sc.next();
+        String autor = sc.nextLine();
         System.out.println("Ingresa el genero del libro");
-        String genero = sc.next();
+        String genero = sc.nextLine();
         System.out.println("Ingresa el ano de publicacion del libro");
         short anhoPublicacion = sc.nextShort();
         boolean seIngreso = false;
