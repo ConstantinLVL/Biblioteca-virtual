@@ -42,7 +42,7 @@ public class Biblioteca {
 
     public void eliminarLibro(){
         System.out.print("Ingrese el titulo del libro que desea eliminar: ");
-        String titulo = sc.next();
+        String titulo = sc.nextLine();
         if (titulo != null){
             for (Libro libro: this.libros) {
                 if ( libro.getTitulo().equals(titulo) ){
@@ -72,8 +72,10 @@ public class Biblioteca {
 
     public void busquedaPorAutor(){
         System.out.print("Ingrese el autor del libro que busca: ");
+        sc.nextLine(); // Consumir el carácter de nueva línea pendiente
         String busquedaAutor = sc.nextLine();
         int coincidencias = 0;
+
         if (busquedaAutor != null){
             for (Libro libro: this.libros) {
                 if (libro.getAutor().equals(busquedaAutor)) {
@@ -87,6 +89,7 @@ public class Biblioteca {
 
     public void busquedaPorTitulo(){
         System.out.print("Ingrese el titulo del libro que busca: ");
+        sc.nextLine(); // Consumir el carácter de nueva línea pendiente
         String busquedaTitulo = sc.nextLine();
         int coincidencias = 0;
         if (busquedaTitulo != null){

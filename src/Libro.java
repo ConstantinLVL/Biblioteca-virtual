@@ -49,6 +49,6 @@ public class Libro {
         return "Titulo: " + titulo +
                 "\nAutor: " + autor +
                 "\nGenero: " + genero +
-                "\nAño de publicacion: " + anhoPublicacion;
+                "\nAño de publicacion: " + anhoPublicacion + "\n";
     }
 }
