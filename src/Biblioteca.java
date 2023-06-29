@@ -6,13 +6,22 @@ public class Biblioteca {
     private String nombre;
     private String ciudad;
     private HashSet<Libro> libros = new HashSet<>();
+    private Scanner sc = new Scanner(System.in);
 
     public Biblioteca(String nombre, String ciudad){
         this.nombre = nombre;
         this.ciudad = ciudad;
     }
 
-    public void agregraLibro(String titulo,String autor, String genero, short anhoPublicacion){
+    public void agregraLibro(){
+        System.out.println("Ingresa el titulo del libro");
+        String titulo = sc.next();
+        System.out.println("Ingresa el nombre del autor del libro");
+        String autor = sc.next();
+        System.out.println("Ingresa el genero del libro");
+        String genero = sc.next();
+        System.out.println("Ingresa el ano de publicacion del libro");
+        short anhoPublicacion = sc.nextShort();
         boolean seIngreso = false;
         if ( (titulo != null && autor != null && genero != null) ){
             if (Short.valueOf(anhoPublicacion).toString().length() == 4){
@@ -23,7 +32,17 @@ public class Biblioteca {
         else System.out.println("El libro no se agrego a la Biblioteca, revisa que no exista y los requisitos para agregarlo");
     }
 
-    public void eliminarLibro(String titulo){
+    public void agregraLibro(String titulo, String autor, String genero, short anhoPublicacion){
+        if ( (titulo != null && autor != null && genero != null) ){
+            if (Short.valueOf(anhoPublicacion).toString().length() == 4){
+                this.libros.add(new Libro(titulo, autor, genero, anhoPublicacion));
+            }
+        }
+    }
+
+    public void eliminarLibro(){
+        System.out.print("Ingrese el titulo del libro que desea eliminar: ");
+        String titulo = sc.next();
         if (titulo != null){
             for (Libro libro: this.libros) {
                 if ( libro.getTitulo().equals(titulo) ){
@@ -37,12 +56,13 @@ public class Biblioteca {
 
     public void mostrarLibros(){
         for (Libro libro: this.libros){
-            System.out.println(libro.toString());
+            System.out.println(libro.toString() + "\n");
         }
     }
 
-    public void buscarLibro(String busqueda){
-        Scanner sc = new Scanner(System.in);
+    public void buscarLibro(){
+        System.out.println("Por medio de cual criterio desea buscar el libro: \n1. Autor \n2. Titulo");
+        System.out.print("Elija una opcion: ");
         int opiconDeBusqueda = sc.nextInt();
         switch (opiconDeBusqueda) {
             case 1 -> busquedaPorAutor();
@@ -51,7 +71,6 @@ public class Biblioteca {
     }
 
     public void busquedaPorAutor(){
-        Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese el autor del libro que busca: ");
         String busquedaAutor = sc.nextLine();
         int coincidencias = 0;
@@ -62,12 +81,11 @@ public class Biblioteca {
                     coincidencias++;
                 }
             }
-            System.out.println("Se han encontrado " + coincidencias + " libros de acuerdo a su criterio de busqueda");
+            System.out.println("Se han encontrado " + coincidencias + " libros en la biblioteca: " + this.nombre +  ", de acuerdo a su criterio de busqueda");
         } else System.out.println("Su criterio de busqueda no puede estar vacio");
     }
 
     public void busquedaPorTitulo(){
-        Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese el titulo del libro que busca: ");
         String busquedaTitulo = sc.nextLine();
         int coincidencias = 0;
@@ -78,7 +96,7 @@ public class Biblioteca {
                     coincidencias++;
                 }
             }
-            System.out.println("Se han encontrado " + coincidencias + " libros de acuerdo a su criterio de busqueda");
+            System.out.println("Se han encontrado " + coincidencias + " libros en la biblioteca: " + this.nombre +  ", de acuerdo a su criterio de busqueda");
         } else System.out.println("Su criterio de busqueda no puede estar vacio");
     }
 
