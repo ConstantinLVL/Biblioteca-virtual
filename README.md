@@ -34,3 +34,9 @@ La biblioteca virtual cuenta con las siguientes funcionalidades:
 ## Licencia
 
 Este proyecto no tiene una licencia específica y es de uso totalmente libre.
+
+## Documento de propuesta
+
+En este documento se podran leer los requerimientos inicales del proyecto, los requisitos y la propuesta generel del mismo.
+
+[Documento word online](https://docs.google.com/document/d/1luu8r3k1p8cuMMQmz231uPo115VA0STwJn7mpiZWvRA/edit?usp=sharing)
