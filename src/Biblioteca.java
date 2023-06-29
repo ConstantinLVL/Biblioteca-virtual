@@ -14,13 +14,13 @@ public class Biblioteca {
     }
 
     public void agregraLibro(Biblioteca bibliotecaActual){
-        System.out.println("Ingresa el titulo del libro");
+        System.out.print("Ingresa el titulo del libro: ");
         String titulo = sc.nextLine();
-        System.out.println("Ingresa el nombre del autor del libro");
+        System.out.print("Ingresa el nombre del autor del libro: ");
         String autor = sc.nextLine();
-        System.out.println("Ingresa el genero del libro");
+        System.out.print("Ingresa el genero del libro: ");
         String genero = sc.nextLine();
-        System.out.println("Ingresa el ano de publicacion del libro");
+        System.out.print("Ingresa el año de publicacion del libro (4 digitos): ");
         short anhoPublicacion = sc.nextShort();
         boolean seIngreso = false;
         if ( (titulo != null && autor != null && genero != null) ){
@@ -28,8 +28,8 @@ public class Biblioteca {
                     seIngreso = this.libros.add(new Libro(titulo, autor, genero, anhoPublicacion));
             }
         }
-        if (seIngreso) System.out.println("El libro se agrego a la Biblioteca de forma exitosa!");
-        else System.out.println("El libro no se agrego a la Biblioteca, revisa que no exista y los requisitos para agregarlo");
+        if (seIngreso) System.out.println("El libro se agrego a la Biblioteca de forma exitosa!\n");
+        else System.err.println("El libro no se agrego a la Biblioteca, revisa que no exista y que hayas proporcionado la informacion correcta\n");
         Main.menuDeOPciones(bibliotecaActual);
     }
 
@@ -48,7 +48,7 @@ public class Biblioteca {
             for (Libro libro: this.libros) {
                 if ( libro.getTitulo().equals(titulo) ){
                     this.libros.remove(libro);
-                    System.out.println("Se elimino el libro exitosamente");
+                    System.out.println("Se elimino el libro exitosamente!\n");
                     break;
                 }
             }
@@ -58,6 +58,7 @@ public class Biblioteca {
 
     public void mostrarLibros(Biblioteca bibliotecaActual){
         for (Libro libro: this.libros){
+            System.out.println("#----------------#");
             System.out.print(libro.toString() + "\n");
         }
         Main.menuDeOPciones(bibliotecaActual);
@@ -82,12 +83,13 @@ public class Biblioteca {
         if (busquedaAutor != null){
             for (Libro libro: this.libros) {
                 if (libro.getAutor().equals(busquedaAutor)) {
+                    System.out.println();
                     System.out.println(libro);
                     coincidencias++;
                 }
             }
-            System.out.println("Se han encontrado " + coincidencias + " libros en la biblioteca: " + this.nombre +  ", de acuerdo a su criterio de busqueda");
-        } else System.out.println("Su criterio de busqueda no puede estar vacio");
+            System.out.println("Se han encontrado " + coincidencias + " libro(s) en la biblioteca: " + this.nombre +  ", de acuerdo a su criterio de busqueda\n");
+        } else System.out.println("Su criterio de busqueda no puede estar vacio\n");
         Main.menuDeOPciones(bibliotecaActual);
     }
 
@@ -99,12 +101,13 @@ public class Biblioteca {
         if (busquedaTitulo != null){
             for (Libro libro: this.libros) {
                 if (libro.getTitulo().equals(busquedaTitulo)) {
+                    System.out.println();
                     System.out.println(libro);
                     coincidencias++;
                 }
             }
-            System.out.println("Se han encontrado " + coincidencias + " libros en la biblioteca: " + this.nombre +  ", de acuerdo a su criterio de busqueda");
-        } else System.out.println("Su criterio de busqueda no puede estar vacio");
+            System.out.println("Se han encontrado " + coincidencias + " libro(s) en la biblioteca: " + this.nombre +  ", de acuerdo a su criterio de busqueda\n");
+        } else System.out.println("Su criterio de busqueda no puede estar vacio\n");
         Main.menuDeOPciones(bibliotecaActual);
     }
 
