@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Scanner;
 
 public class Biblioteca {
 
@@ -38,6 +39,47 @@ public class Biblioteca {
         for (Libro libro: this.libros){
             System.out.println(libro.toString());
         }
+    }
+
+    public void buscarLibro(String busqueda){
+        Scanner sc = new Scanner(System.in);
+        int opiconDeBusqueda = sc.nextInt();
+        switch (opiconDeBusqueda) {
+            case 1 -> busquedaPorAutor();
+            case 2 -> busquedaPorTitulo();
+        }
+    }
+
+    public void busquedaPorAutor(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el autor del libro que busca: ");
+        String busquedaAutor = sc.nextLine();
+        int coincidencias = 0;
+        if (busquedaAutor != null){
+            for (Libro libro: this.libros) {
+                if (libro.getAutor().equals(busquedaAutor)) {
+                    System.out.println(libro);
+                    coincidencias++;
+                }
+            }
+            System.out.println("Se han encontrado " + coincidencias + " libros de acuerdo a su criterio de busqueda");
+        } else System.out.println("Su criterio de busqueda no puede estar vacio");
+    }
+
+    public void busquedaPorTitulo(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el titulo del libro que busca: ");
+        String busquedaTitulo = sc.nextLine();
+        int coincidencias = 0;
+        if (busquedaTitulo != null){
+            for (Libro libro: this.libros) {
+                if (libro.getTitulo().equals(busquedaTitulo)) {
+                    System.out.println(libro);
+                    coincidencias++;
+                }
+            }
+            System.out.println("Se han encontrado " + coincidencias + " libros de acuerdo a su criterio de busqueda");
+        } else System.out.println("Su criterio de busqueda no puede estar vacio");
     }
 
     public String getNombre() {
