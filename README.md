@@ -6,7 +6,7 @@ Este proyecto es una aplicación de consola en Java que simula una biblioteca vi
 
 ## Requisitos del proyecto
 
-- Java (versión X.X.X)
+- Java (versión 11 o superior)
 - IDE (Eclipse, IntelliJ, etc.) o compilador de Java
 
 ## Funcionalidades
