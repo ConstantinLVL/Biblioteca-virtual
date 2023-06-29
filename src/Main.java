@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+
         Biblioteca bibliotecaBarcelona = new Biblioteca("Biblioteca publica de Barcelona", "Barcelona");
         bibliotecaBarcelona.agregraLibro("La sombra del viento", "Carlos Ruiz Zafón", "Misterio", (short) 2001);
         bibliotecaBarcelona.agregraLibro("1984", "George Orwell", "Ciencia ficción", (short) 1949);
@@ -33,6 +34,10 @@ public class Main {
         switch (ciudad) {
             case 1 -> menuDeOPciones(bibliotecaBarcelona);
             case 2 -> menuDeOPciones(bibliotecaBarranquilla);
+            default -> {
+                System.err.println("La opcion elegida no es valida, el programa se cerrara");
+                System.exit(0);
+            }
         }
     }
 
@@ -48,10 +53,14 @@ public class Main {
         int opcion = sc.nextInt();
 
         switch (opcion){
-            case 1 -> ciudadBiblioteca.agregraLibro();
-            case 2 -> ciudadBiblioteca.eliminarLibro();
-            case 3 -> ciudadBiblioteca.buscarLibro();
-            case 4 -> ciudadBiblioteca.mostrarLibros();
+            case 1 -> ciudadBiblioteca.agregraLibro(ciudadBiblioteca);
+            case 2 -> ciudadBiblioteca.eliminarLibro(ciudadBiblioteca);
+            case 3 -> ciudadBiblioteca.buscarLibro(ciudadBiblioteca);
+            case 4 -> ciudadBiblioteca.mostrarLibros(ciudadBiblioteca);
+            default -> {
+                System.err.println("La opcion elegida no es valida, el programa se cerrara");
+                System.exit(0);
+            }
         }
     }
 

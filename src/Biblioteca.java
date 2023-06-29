@@ -13,7 +13,7 @@ public class Biblioteca {
         this.ciudad = ciudad;
     }
 
-    public void agregraLibro(){
+    public void agregraLibro(Biblioteca bibliotecaActual){
         System.out.println("Ingresa el titulo del libro");
         String titulo = sc.nextLine();
         System.out.println("Ingresa el nombre del autor del libro");
@@ -30,6 +30,7 @@ public class Biblioteca {
         }
         if (seIngreso) System.out.println("El libro se agrego a la Biblioteca de forma exitosa!");
         else System.out.println("El libro no se agrego a la Biblioteca, revisa que no exista y los requisitos para agregarlo");
+        Main.menuDeOPciones(bibliotecaActual);
     }
 
     public void agregraLibro(String titulo, String autor, String genero, short anhoPublicacion){
@@ -40,7 +41,7 @@ public class Biblioteca {
         }
     }
 
-    public void eliminarLibro(){
+    public void eliminarLibro(Biblioteca bibliotecaActual){
         System.out.print("Ingrese el titulo del libro que desea eliminar: ");
         String titulo = sc.nextLine();
         if (titulo != null){
@@ -52,25 +53,27 @@ public class Biblioteca {
                 }
             }
         }
+        Main.menuDeOPciones(bibliotecaActual);
     }
 
-    public void mostrarLibros(){
+    public void mostrarLibros(Biblioteca bibliotecaActual){
         for (Libro libro: this.libros){
-            System.out.println(libro.toString() + "\n");
+            System.out.print(libro.toString() + "\n");
         }
+        Main.menuDeOPciones(bibliotecaActual);
     }
 
-    public void buscarLibro(){
+    public void buscarLibro(Biblioteca bibliotecaActual){
         System.out.println("Por medio de cual criterio desea buscar el libro: \n1. Autor \n2. Titulo");
         System.out.print("Elija una opcion: ");
         int opiconDeBusqueda = sc.nextInt();
         switch (opiconDeBusqueda) {
-            case 1 -> busquedaPorAutor();
-            case 2 -> busquedaPorTitulo();
+            case 1 -> busquedaPorAutor(bibliotecaActual);
+            case 2 -> busquedaPorTitulo(bibliotecaActual);
         }
     }
 
-    public void busquedaPorAutor(){
+    public void busquedaPorAutor(Biblioteca bibliotecaActual){
         System.out.print("Ingrese el autor del libro que busca: ");
         sc.nextLine(); // Consumir el carácter de nueva línea pendiente
         String busquedaAutor = sc.nextLine();
@@ -85,9 +88,10 @@ public class Biblioteca {
             }
             System.out.println("Se han encontrado " + coincidencias + " libros en la biblioteca: " + this.nombre +  ", de acuerdo a su criterio de busqueda");
         } else System.out.println("Su criterio de busqueda no puede estar vacio");
+        Main.menuDeOPciones(bibliotecaActual);
     }
 
-    public void busquedaPorTitulo(){
+    public void busquedaPorTitulo(Biblioteca bibliotecaActual){
         System.out.print("Ingrese el titulo del libro que busca: ");
         sc.nextLine(); // Consumir el carácter de nueva línea pendiente
         String busquedaTitulo = sc.nextLine();
@@ -101,6 +105,7 @@ public class Biblioteca {
             }
             System.out.println("Se han encontrado " + coincidencias + " libros en la biblioteca: " + this.nombre +  ", de acuerdo a su criterio de busqueda");
         } else System.out.println("Su criterio de busqueda no puede estar vacio");
+        Main.menuDeOPciones(bibliotecaActual);
     }
 
     public String getNombre() {
