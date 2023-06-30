@@ -67,8 +67,8 @@ public class Biblioteca {
     public void buscarLibro(Biblioteca bibliotecaActual){
         System.out.println("Por medio de cual criterio desea buscar el libro: \n1. Autor \n2. Titulo");
         System.out.print("Elija una opcion: ");
-        int opiconDeBusqueda = sc.nextInt();
-        switch (opiconDeBusqueda) {
+        int opcionDeBusqueda = sc.nextInt();
+        switch (opcionDeBusqueda) {
             case 1 -> busquedaPorAutor(bibliotecaActual);
             case 2 -> busquedaPorTitulo(bibliotecaActual);
             default -> {
