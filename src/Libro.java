@@ -47,6 +47,7 @@ public class Libro {
     /**
      * Este metodo sobreescrito formatea la salida de los atributos de un objeto Libro.
      * @return Devuelve la informacion de un objeto Libro formateada lista para imprimirse en consola.
+     * @author David M.
      */
     @Override
     public String toString() {
