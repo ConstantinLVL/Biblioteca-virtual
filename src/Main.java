@@ -28,14 +28,14 @@ public class Main {
         bibliotecaBarranquilla.agregraLibro("Pedro Páramo", "Juan Rulfo", "Novela", (short) 1955);
         bibliotecaBarranquilla.agregraLibro("La fiesta del chivo", "Mario Vargas Llosa", "Novela histórica", (short) 2000);
 
-        System.out.println("En que ciudad te encuentras? \n1. Barcelona \n2. Barranquilla");
+        System.out.println("¿En que ciudad te encuentras? \n1. Barcelona \n2. Barranquilla");
         int ciudad = sc.nextInt();
 
         switch (ciudad) {
             case 1 -> menuDeOPciones(bibliotecaBarcelona);
             case 2 -> menuDeOPciones(bibliotecaBarranquilla);
             default -> {
-                System.err.println("La opcion elegida no es valida, el programa se terminara");
+                System.err.println("La opcion elegida no es valida, el programa se terminara.");
                 System.exit(0);
             }
         }
@@ -47,7 +47,8 @@ public class Main {
                 "\n1. Agregar un libro" +
                 "\n2. Eliminar un libro." +
                 "\n3. Buscar libro" +
-                "\n4. Mostar todos los libros");
+                "\n4. Mostar todos los libros" +
+                "\n5. Terminar Programa");
 
         System.out.print("Que desea realizar: ");
         int opcion = sc.nextInt();
@@ -57,8 +58,9 @@ public class Main {
             case 2 -> ciudadBiblioteca.eliminarLibro(ciudadBiblioteca);
             case 3 -> ciudadBiblioteca.buscarLibro(ciudadBiblioteca);
             case 4 -> ciudadBiblioteca.mostrarLibros(ciudadBiblioteca);
+            case 5 -> System.exit(0);
             default -> {
-                System.err.println("La opcion elegida no es valida, el programa terminara");
+                System.err.println("La opcion elegida no es valida, el programa terminara.");
                 System.exit(0);
             }
         }
