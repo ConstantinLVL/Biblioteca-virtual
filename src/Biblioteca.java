@@ -1,12 +1,18 @@
 import java.util.HashSet;
 import java.util.Scanner;
 
+/**
+ * La clase "Biblioteca" representa una biblioteca con atributos como nombre, ciudad y un conjunto de libros representado
+ * por un HashSet. La clase proporciona métodos para interactuar con la biblioteca, como agregar libros, eliminar libros,
+ * mostrar los libros disponibles y buscar libros por autor o título.
+ * @author David M.
+ */
 public class Biblioteca {
 
     private String nombre;
     private String ciudad;
     private HashSet<Libro> libros = new HashSet<>();
-    private Scanner sc = new Scanner(System.in);
+    private final Scanner sc = new Scanner(System.in);
 
     /**
      * Este constructor recibe dos parametros que inicializan los atributos de la clase Biblioteca e instancia un objeto
@@ -15,6 +21,7 @@ public class Biblioteca {
      * @param nombre Este parametro inicializa el atributo nombre de la clase Biblioteca cuando se quiere instanciar un objeto a partir de esta clase
      * @param ciudad Este parametro inicializa el atributo ciudad de la clase Biblioteca cuando se quiere instanciar un objeto a partir de esta clase
      */
+
     public Biblioteca(String nombre, String ciudad){
         this.nombre = nombre;
         this.ciudad = ciudad;
@@ -169,17 +176,4 @@ public class Biblioteca {
         } else System.out.println("Su criterio de busqueda no puede estar vacio\n");
         Main.menuDeOPciones(bibliotecaActual);
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCiudad() {
-        return ciudad;
-    }
-
 }

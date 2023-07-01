@@ -1,3 +1,8 @@
+/**
+ * La clase "Libro" representa un libro con atributos como título, autor, género y año de publicación. Esta clase proporciona
+ * métodos para acceder a algunos de los atributos del libro y formatear la información del libro para su visualización.
+ * @author David M.
+ */
 public class Libro {
 
     private String titulo;
@@ -16,32 +21,8 @@ public class Libro {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public String getAutor() {
         return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public short getAnhoPublicacion() {
-        return anhoPublicacion;
-    }
-
-    public void setAnhoPublicacion(short anhoPublicacion) {
-        this.anhoPublicacion = anhoPublicacion;
     }
 
     /**
