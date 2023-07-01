@@ -9,7 +9,8 @@ public class Biblioteca {
     private Scanner sc = new Scanner(System.in);
 
     /**
-     * Este constructor recibe dos parametros que inicializan los atributos de la clase Biblioteca e instancia un objeto de tipo Biblioteca si las entradas son validas.
+     * Este constructor recibe dos parametros que inicializan los atributos de la clase Biblioteca e instancia un objeto
+     * de tipo Biblioteca si las entradas son validas.
      * @autor David M.
      * @param nombre Este parametro inicializa el atributo nombre de la clase Biblioteca cuando se quiere instanciar un objeto a partir de esta clase
      * @param ciudad Este parametro inicializa el atributo ciudad de la clase Biblioteca cuando se quiere instanciar un objeto a partir de esta clase
@@ -20,7 +21,9 @@ public class Biblioteca {
     }
 
     /**
-     * Este metodo agrega un objeto Libro al HashSet del objeto Biblioteca que lo llama, dentro de su implementacion pide ingresar por consola los atributos para crear un Libro y valida que las entradas sean validas para realizar la insercion con el metodo add.
+     * Este metodo agrega un objeto Libro al HashSet del objeto Biblioteca que lo llama, dentro de su implementacion pide
+     * ingresar por consola los atributos para crear un Libro y valida que las entradas sean validas para realizar la
+     * insercion con el metodo add.
      * @autor David M.
      * @param bibliotecaActual Este parametro que viene desde la clase Main en el metodo menuDeOpciones, se toma dentro de este metodo para llamar al metodo menuDeOpcion de la clase Main y pasarselo como parametro nuevamente.
      */
@@ -45,7 +48,9 @@ public class Biblioteca {
     }
 
     /**
-     * Este metodo agrega un objeto Libro al HashSet del objeto Biblioteca que lo llama, dentro de su implementacion valida que las entradas que vienen desde el llamado sean validas y luego procede a agregar el objeto Libro al HashSet con el metodo add - (este metodo solo se usa para ingresar manualmente objetos de tipo Libro al HashSet en el metodo Main)
+     * Este metodo agrega un objeto Libro al HashSet del objeto Biblioteca que lo llama, dentro de su implementacion valida
+     * que las entradas que vienen desde el llamado sean validas y luego procede a agregar el objeto Libro al HashSet con el
+     * metodo add - (este metodo solo se usa para ingresar manualmente objetos de tipo Libro al HashSet en el metodo Main)
      * @param titulo Este parametro inicializa el atributo titulo de la clase Libro cuando se quiere instanciar un objeto a partir de esta clase.
      * @param autor Este parametro inicializa el atributo autor de la clase Libro cuando se quiere instanciar un objeto a partir de esta clase.
      * @param genero Este parametro inicializa el atributo genero de la clase Libro cuando se quiere instanciar un objeto a partir de esta clase.
@@ -61,7 +66,8 @@ public class Biblioteca {
     }
 
     /**
-     * Este metodo elimina del HashSet un objeto Libro buscandolo por medio de su titulo, antes de proceder a eliminarlo con el metodo remove verifica que el Libro exista dentro del HashSet.
+     * Este metodo elimina del HashSet un objeto Libro buscandolo por medio de su titulo, antes de proceder a eliminarlo
+     * con el metodo remove verifica que el Libro exista dentro del HashSet.
      * @param bibliotecaActual Este parametro que viene desde la clase Main en el metodo menuDeOpciones, se toma dentro de este metodo para llamar al metodo menuDeOpcion de la clase Main y pasarselo como parametro nuevamente.
      * @autor David M.
      */
@@ -81,7 +87,8 @@ public class Biblioteca {
     }
 
     /**
-     * Este metodo itera con un foreach el HashSet que contiene los objetos Libros, imprime todos los atributos de cada objeto Libro formateados con el metodo toString.
+     * Este metodo itera con un foreach el HashSet que contiene los objetos Libros, imprime todos los atributos de cada
+     * objeto Libro formateados con el metodo toString.
      * @param bibliotecaActual Este parametro que viene desde la clase Main en el metodo menuDeOpciones, se toma dentro de este metodo para llamar al metodo menuDeOpcion de la clase Main y pasarselo como parametro nuevamente.
      * @autor David M.
      */
@@ -94,7 +101,9 @@ public class Biblioteca {
     }
 
     /**
-     * Este metodo es la puerta de entrada a dos metodos de esta clase mediante un bloque swich donde se podra escoger que metodo se quiere usar, busquedaPorAutor o busquedaPorTitulo para buscar algun libro dentro del HasMap de la Biblioteca que los llama.
+     * Este metodo es la puerta de entrada a dos metodos de esta clase mediante un bloque swich donde se podra escoger que
+     * metodo se quiere usar, busquedaPorAutor o busquedaPorTitulo para buscar algun libro dentro del HasMap de la Biblioteca
+     * que los llama.
      * @param bibliotecaActual Este parametro que viene desde la clase Main en el metodo menuDeOpciones, se toma dentro de este metodo para llamar a cualquiera de los dos metodos opcionales que se pueden llamar desde este metodo, y pasarselo como parametro para que actuen en la misma Biblioteca que llama a este metodo.
      * @autor David M.
      */
@@ -113,7 +122,8 @@ public class Biblioteca {
     }
 
     /**
-     * Este metodo busca un Libro dentro del HashMap de la Biblioteca que lo llama con el nombre del autor como criterio de busqueda.
+     * Este metodo busca un Libro dentro del HashMap de la Biblioteca que lo llama con el nombre del autor como criterio de
+     * busqueda.
      * @param bibliotecaActual Este parametro que viene desde la clase Main en el metodo menuDeOpciones, se toma dentro de este metodo para llamar al metodo menuDeOpcion de la clase Main y pasarselo como parametro nuevamente.
      * @autor David M.
      */
@@ -137,7 +147,8 @@ public class Biblioteca {
     }
 
     /**
-     * Este metodo busca un Libro dentro del HashMap de la Biblioteca que lo llama con el titulo del libro como criterio de busqueda.
+     * Este metodo busca un Libro dentro del HashMap de la Biblioteca que lo llama con el titulo del libro como criterio de
+     * busqueda.
      * @param bibliotecaActual Este parametro que viene desde la clase Main en el metodo menuDeOpciones, se toma dentro de este metodo para llamar al metodo menuDeOpcion de la clase Main y pasarselo como parametro nuevamente.
      * @autor David M.
      */
